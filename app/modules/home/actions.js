@@ -1,4 +1,3 @@
-
 import { Actions } from 'react-native-router-flux';
 import { database } from '../../config/firebase';
 

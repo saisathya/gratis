@@ -8,8 +8,6 @@ class EventsList extends Component {
 
 
       componentWillMount() {
-        // console.log(JSON.parse(testData));
-          //this.setState({ events:  testData });
           this.props.employeesFetch();
           console.log('out');
 
