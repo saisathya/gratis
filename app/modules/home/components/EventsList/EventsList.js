@@ -26,19 +26,12 @@ class EventsList extends Component {
           this.dataSource = ds.cloneWithRows(events);
       }
 
-      // renderRow(event) {
-      //     return <EventsDetail event={event} />;
-      //   }
-
       render() {
-
-        console.log(this.props);
+          console.log(this.props);
           return (
-          <View
-              // enableEmptySections
-              // dataSource={this.dataSource}
-              // renderRow={this.renderRow}
-          />
+          <View>
+
+          </View>
           );
       }
     }
