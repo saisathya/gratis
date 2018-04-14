@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Text, View, Image,  } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
@@ -46,5 +45,6 @@ const styles = {
     marginRight: 10
   }
 };
+
 
 export default EventDetail;
