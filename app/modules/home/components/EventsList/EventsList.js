@@ -1,32 +1,28 @@
-import React, {Component} from 'react';
-import { ScrollView, Text } from 'react-native';
-import testData from '../../TestData';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { ScrollView } from 'react-native';
+import { employeesFetch } from '../../actions';
+
 
 class EventsList extends Component {
 
 
       componentWillMount() {
-        console.log(JSON.parse(testData));
+        // console.log(JSON.parse(testData));
           //this.setState({ events:  testData });
+          this.props.employeesFetch();
+          console.log('out');
+
+          console.log('out');
       }
-
-      renderEvents() {
-        // return this.state.events.map((event) =>
-        //     <EventDetail key={event.title} event={event} />
-        //   );
-        //
-        // console.log(this.state);
-        return JSON.parse(testData).map((event) => <EventDetail key={event.title} event={event} />)
-
-      }
-
-      render(){
-          return(
+      render() {
+          return (
             <ScrollView>
-              {this.renderEvents()}
+
             </ScrollView>
           );
       }
     }
 
-export default EventsList;
+
+export default connect(null, { employeesFetch })(EventsList);
